@@ -41,16 +41,20 @@
 
         <!--TitlePanel 包含应用程序的名称和页标题-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="跌倒检测助手" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+            <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0">
+            	<Run Text="跌倒"/>
+            	<Run Text="监测"/>
+            	<Run Text="助手"/>
+            </TextBlock>
             <TextBlock Text="主页" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - 在此处放置其他内容-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button x:Name="GuideButton" Content="向导" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="171"/>
-            <Button Content="设置" HorizontalAlignment="Left" Margin="0,171,0,0" VerticalAlignment="Top" Height="169" Width="261" Click="Button_Click_1"/>
-            <Button Content="关于" HorizontalAlignment="Left" Margin="261,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.078,-0.178" Height="169" Width="185"/>
-            <Button Content="检测服务开关" HorizontalAlignment="Left" Margin="0,345,0,0" VerticalAlignment="Top" Height="169" Width="446"/>
+            <Button x:Name="GuideButton" Content="向导" HorizontalAlignment="Left" VerticalAlignment="Top" Width="446" Height="171" Background="#99CC00" Click="GuideButton_Click"/>
+            <Button x:Name="SettingButton" Content="设置" HorizontalAlignment="Left" Margin="0,171,0,0" VerticalAlignment="Top" Height="169" Width="261" Click="Button_Click_1" Background="#FFFF8800"/>
+            <Button x:Name="AboutButton" Content="关于" HorizontalAlignment="Left" Margin="261,171,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.078,-0.178" Height="169" Width="185" Background="#FFAA66CC" Click="AboutButton_Click"/>
+            <Button x:Name="SwitchButton" Content="检测服务开关" HorizontalAlignment="Left" Margin="0,345,0,0" VerticalAlignment="Top" Height="169" Width="446"  Click="SwitchButton_Click"/>
             <TextBlock HorizontalAlignment="Left" Margin="92,542,0,0" TextWrapping="Wrap" Text="电子科技大学微软创新工作室" VerticalAlignment="Top" Height="35" Width="263"/>
 
         </Grid>
